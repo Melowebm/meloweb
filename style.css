@@ -379,6 +379,7 @@ body.home-page .timeLine p {
   opacity: 0;
   font-size: 85%;
 }
+
 body.home-page .view {
   text-align: center;
   width: 90%;
@@ -386,7 +387,6 @@ body.home-page .view {
   right: 0;
   margin: 0 auto;
   max-width: 500px;
-  flex-wrap: wrap;
 }
 body.home-page .view h3 {
   animation: fadeIn 0.8s ease-out forwards;
@@ -947,7 +947,12 @@ body.about-page .profile {
     padding: 20px;
     max-width: 600px;
   }
-
+body.about-page .studyList h1 {
+  text-align: center;
+}
+body.about-page .studyList p {
+  margin: 20px 20px;
+}
 body.about-page .profile p {
     padding-top: 15px;
     text-align: left;
@@ -978,6 +983,18 @@ body.about-page .icon {
   font-size: 450%;
   text-align: center;
 }
+body.about-page .journey {
+  animation: fadeIn 0.8s ease-out forwards;
+  animation-delay: 1.9s;
+  opacity: 0;
+}
+body.about-page .studyList {
+  animation: fadeIn 0.8s ease-out forwards;
+  animation-delay: 2.4s;
+  opacity: 0;
+  margin: 10px 10px;
+}
+
 @media (min-width: 748px) {
   body.about-page .container {
     animation: fadeIn 0.8s ease-out forwards;
@@ -1090,7 +1107,6 @@ body.contact-page .info-card-form {
   border-radius: 15px;
   border: 1px solid hwb(240 0% 73%);
 }
-
 
 
 
