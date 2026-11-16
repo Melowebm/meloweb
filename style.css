@@ -103,7 +103,7 @@ body.home-page .intro,
 body.project-page .intro,
 body.skills-page .intro {
   font-family: 'Inter', 'Poppins', sans-serif;
-  background-image: linear-gradient(480deg, rgba(0,0,0,0.6), rgba(0, 0, 0, 0.6)), url('image2.jpg');
+  background-image: linear-gradient(480deg, rgba(0,0,0,0.6), rgba(0, 0, 0, 0.6)), url('../w_Image/image2.jpg');
   background-size: cover;
   background-position: right center;
   padding: 15px 20px 15px 10px;
@@ -162,7 +162,6 @@ body.contact-page .navigation-bar a:hover {
   background-color: darkblue;
   color: white;
 }
-
 
 body.project-page .intro,
 body.skills-page .intro, 
@@ -339,9 +338,30 @@ body.home-page .main {
   text-align: center;
   justify-content: center;
   width: 100%;
-  gap: 90px;
-  margin-top: 120px;
+  
   margin-bottom: 120px;
+}
+@media (min-width: 748px) {
+  body.home-page .main {
+    gap: 90px;
+  }
+}
+body.home-page .class {
+  text-align: center;
+  width: 90%;
+  display: block;
+  margin: 0 auto;
+}
+body.home-page .class h1 {
+  animation: fadeSlide 0.8s ease-in forwards;
+  opacity: 0;
+  font-size: 250%;
+}
+body.home-page .class p {
+  animation: fadeIn 0.8s ease-in forwards;
+  animation-delay: 0.3s;
+  opacity: 0;
+  font-size: 80%;
 }
 body.home-page .main-content {
   flex-wrap: wrap;
@@ -351,6 +371,7 @@ body.home-page .main-content {
 }
 body.home-page .main-content h1{
   animation: fadeSlide 0.8s ease-in forwards;
+  animation-delay: 0.7s;
   opacity: 0;
   font-size: 250%;
 }
@@ -363,7 +384,6 @@ body.home-page .main-content p {
 body.home-page .timeLine {
   width: 90%;
   max-width: 500px;
-  margin-top: -10px;
   flex-wrap: wrap;
 }
 body.home-page .timeLine h3 {
@@ -379,26 +399,84 @@ body.home-page .timeLine p {
   opacity: 0;
   font-size: 85%;
 }
-
-body.home-page .view {
+body.home-page .head-pro {
   text-align: center;
-  width: 90%;
-  left: 0;
-  right: 0;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+body.home-page .featured-card {
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.1);
+  height: 420px;
+  width: 300px;
+  border-radius: 20px;
+  box-shadow: inset 0 0 1px white;
   margin: 0 auto;
-  max-width: 500px;
+  backdrop-filter: blur(40px);
 }
-body.home-page .view h3 {
-  animation: fadeIn 0.8s ease-out forwards;
-  animation-delay: 1.3s;
-  opacity: 0;
-  font-size: 250%;
+body.home-page .featured-card h3, p {
+  margin: 10px;
 }
-body.home-page .view p {
-  animation: fadeIn 0.8s ease-out forwards;
-  animation-delay: 1.4s;
-  opacity: 0;
+body.home-page .featured-card p {
   font-size: 85%;
+  margin-bottom: 50px;
+}
+body.home-page .featured-card .link a {
+  text-decoration: none;
+  color: white;
+  text-align: center;
+  display: block;
+  background-color: darkblue;
+  border-radius: 5px;
+  width: 80%;
+  padding: 5px;
+}
+body.home-page .featured-card .link {
+  display: flex;
+  justify-content: center;
+}
+body.home-page .featured-card span {
+  margin: 10px;
+  font-size: 80%;
+  background-color: rgb(19, 19, 19);
+  width: 80px;
+  display: block;
+  text-align: center;
+  border-radius: 5px;
+  color: rgb(95, 93, 93);
+  font-style: italic;
+}
+body.home-page .featured-card .span {
+  display: flex;
+}
+body.home-page .featured-card img {
+  padding: 5px;
+  text-align: center;
+  border-radius: 20px;
+}
+body.home-page .feature {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-bottom: 40px;
+}
+@media (min-width: 748px) {
+  body.home-page .class {
+    width: 40%;
+  }
+  body.home-page .timeLine {
+    margin-top: -12px;
+  }
+  body.home-page .featured-card p {
+    font-size: 100%;
+  }
+  body.home-page .featured-card h3 {
+    font-size: 130%;
+  }
+  body.home-page .featured-card span {
+    font-size: 90%;
+  }
 }
 
 
@@ -993,6 +1071,7 @@ body.about-page .studyList {
   animation-delay: 2.4s;
   opacity: 0;
   margin: 10px 10px;
+  font-size: 80%;
 }
 
 @media (min-width: 748px) {
@@ -1013,13 +1092,18 @@ body.about-page .studyList {
   body.about-page .container p {
     font-size: 75%;
   }
+  body.about-page .studyList {
+    font-size: 100%;
+}
 } body.about-page .info-card {
   box-shadow: 0 0 5px skyblue;
   border-radius: 15px;
   animation: fadeIn 0.8s ease-out forwards;
   animation-delay: 1.3s;
   opacity: 0;
-}
+} body.about-page .info-card p {
+  font-size: 90%;
+} 
 
 
 
@@ -1261,7 +1345,9 @@ body.about-page .journey dt {
 
 
 
-
+body.home-page .quote {
+  text-align: center;
+}
 footer {
   position: absolute;
   border-top: 1px solid hwb(0 29% 71%);
